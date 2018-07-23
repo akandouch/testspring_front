@@ -1,0 +1,15 @@
+<p>
+  List of products {{product.name}}
+</p>
+
+<div *ngFor="let product of products">
+  <a>{{product.id}}</a>
+  <a>{{product.name}}</a>
+  <button (click)="deleteProduct(product)">delete</button>
+</div>
+
+name : <input [(ngModel)]="product.name"/><br/>
+price: <input [(ngModel)]="product.reference"/><br/>
+ref  : <input [(ngModel)]="product.price"/><br/>
+<button (click)="addProduct()">add</button>
+add {{product.name}} of reference ( {{product.reference}}) : {{product.price}} €
